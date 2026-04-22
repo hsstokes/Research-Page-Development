@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Lesson 1: Research Page Development - Digital Skills</title>
+<title>Lesson 1: Research Page Development - Creative Digital Skills</title>
 <style>
 :root {
   --primary: #ea37a3;
@@ -13,14 +13,17 @@
   --dark: #222;
   --light: #fff;
   --grid-light: #e0e0e0;
+  --task1: #0a8080;
+  --task1-light: #f5ffff;
+  --task1-banner: #e6ffff;
+  --task2: #6b5b95;
+  --task2-light: #f5f3f7;
+  --task2-banner: #efe9f4;
+  --task3: #c45c4a;
+  --task3-light: #fdf5f3;
+  --task3-banner: #fceae6;
   --purple: #6c5ce7;
   --purple-light: #f8f8ff;
-  --task1: #0a8080;
-  --task1-light: #e6ffff;
-  --task2: #ea37a3;
-  --task2-light: #ffebf5;
-  --task3: #ff6b35;
-  --task3-light: #fff4f0;
 }
 
 * {
@@ -30,31 +33,33 @@
 }
 
 body {
-  font-family: "Typewriter Condensed", "Courier New", monospace;
+  font-family: "Space Mono", "IBM Plex Mono", monospace;
   background-image:
     linear-gradient(var(--grid-light) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-light) 1px, transparent 1px);
-  background-size: 20px 20px, 20px 20px;
+    linear-gradient(90deg, var(--grid-light) 1px, transparent 1px),
+    linear-gradient(#ffeaf5 2px, transparent 2px),
+    linear-gradient(90deg, #ffeaf5 2px, transparent 2px);
+  background-size: 64px 64px, 64px 64px, 320px 320px, 320px 320px;
   background-attachment: fixed;
   color: var(--dark);
   padding: 20px;
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 16px;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.97);
-  border: 3px solid var(--secondary);
+  border: 3px double var(--primary);
   border-radius: 12px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-  padding: 2rem;
+  padding: 2rem 3rem;
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 }
 
@@ -64,158 +69,17 @@ body {
 
 .content-section.active {
   display: block;
-  animation: fadeIn 0.4s ease;
+  animation: fadeIn 0.5s ease;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-h1, h2, h3 {
-  font-family: "Typewriter Condensed", "Courier New", monospace;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.8em;
-}
-
-h1 {
-  color: var(--secondary);
-  font-size: 2.2rem;
-  border-bottom: 3px solid var(--primary);
-  padding-bottom: 15px;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  font-weight: bold;
-}
-
-h2 {
-  color: var(--secondary);
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-}
-
-h2::before {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 25px;
-  background: var(--primary);
-  margin-right: 15px;
-}
-
-h3 {
-  font-size: 1.3rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--primary);
-}
-
-p {
-  line-height: 1.8;
-  margin-bottom: 1.2em;
-  font-size: 1.05rem;
-}
-
-.lesson-badge {
-  display: inline-block;
-  background: var(--secondary);
-  color: white;
-  padding: 8px 20px;
-  border-radius: 25px;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.workshop-structure {
-  background: #f5f5f5;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  border: 2px dashed #666;
-}
-
-.workshop-structure h3 {
-  text-align: center;
-  margin-top: 0;
-  color: #333;
-}
-
-.structure-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin-top: 15px;
-}
-
-.structure-item {
-  flex: 1;
-  min-width: 180px;
-  padding: 15px;
-  border-radius: 8px;
-  border-left: 5px solid;
-}
-
-.structure-item h4 {
-  margin: 0 0 8px 0;
-  font-size: 1rem;
-}
-
-.structure-item p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-.structure-task1 {
-  background: var(--task1-light);
-  border-left-color: var(--task1);
-}
-
-.structure-task1 h4 {
-  color: var(--task1);
-}
-
-.structure-task2 {
-  background: var(--task2-light);
-  border-left-color: var(--task2);
-}
-
-.structure-task2 h4 {
-  color: var(--task2);
-}
-
-.structure-task3 {
-  background: var(--task3-light);
-  border-left-color: var(--task3);
-}
-
-.structure-task3 h4 {
-  color: var(--task3);
-}
-
-.progress-bar-container {
-  height: 10px;
-  background-color: #eee;
-  border-radius: 5px;
-  margin: 20px 0;
-  overflow: hidden;
-}
-
-.progress-bar {
-  height: 100%;
-  background: linear-gradient(90deg, var(--task1), var(--task2), var(--task3));
-  width: 0%;
-  transition: width 0.3s ease;
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .main-navigation {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 12px;
   margin: 25px 0;
 }
@@ -230,23 +94,31 @@ p {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .nav-block:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-.nav-block h4 {
-  font-size: 1.1rem;
-  margin: 0 0 5px 0;
+.nav-block h3 {
+  font-size: 0.95rem;
+  margin: 0 0 6px 0;
+  position: relative;
+  z-index: 2;
 }
 
 .nav-block p {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   margin: 0;
   opacity: 0.8;
+  position: relative;
+  z-index: 2;
 }
 
 .nav-overview {
@@ -254,7 +126,7 @@ p {
   background-color: var(--secondary-light);
 }
 
-.nav-overview h4 {
+.nav-overview h3 {
   color: var(--secondary);
 }
 
@@ -263,7 +135,7 @@ p {
   background-color: var(--task1-light);
 }
 
-.nav-task1 h4 {
+.nav-task1 h3 {
   color: var(--task1);
 }
 
@@ -272,7 +144,7 @@ p {
   background-color: var(--task2-light);
 }
 
-.nav-task2 h4 {
+.nav-task2 h3 {
   color: var(--task2);
 }
 
@@ -281,53 +153,33 @@ p {
   background-color: var(--task3-light);
 }
 
-.nav-task3 h4 {
+.nav-task3 h3 {
   color: var(--task3);
 }
 
-.nav-block.active-block {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+.active-block {
+  background-color: var(--secondary) !important;
+  color: white;
+  box-shadow: 0 8px 20px rgba(10, 128, 128, 0.3);
+  transform: translateY(-5px);
 }
 
-.nav-overview.active-block {
-  background: var(--secondary);
-  color: white;
-}
-
-.nav-overview.active-block h4,
-.nav-overview.active-block p {
-  color: white;
+.active-block h3, .active-block p {
+  color: white !important;
 }
 
 .nav-task1.active-block {
-  background: var(--task1);
-  color: white;
-}
-
-.nav-task1.active-block h4,
-.nav-task1.active-block p {
-  color: white;
+  background-color: var(--task1) !important;
 }
 
 .nav-task2.active-block {
-  background: var(--task2);
-  color: white;
-}
-
-.nav-task2.active-block h4,
-.nav-task2.active-block p {
-  color: white;
+  background-color: var(--task2) !important;
+  box-shadow: 0 8px 20px rgba(107, 91, 149, 0.3);
 }
 
 .nav-task3.active-block {
-  background: var(--task3);
-  color: white;
-}
-
-.nav-task3.active-block h4,
-.nav-task3.active-block p {
-  color: white;
+  background-color: var(--task3) !important;
+  box-shadow: 0 8px 20px rgba(196, 92, 74, 0.3);
 }
 
 .nav-buttons {
@@ -337,7 +189,7 @@ p {
 }
 
 .nav-btn {
-  padding: 12px 25px;
+  padding: 12px 24px;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
@@ -347,6 +199,7 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-family: inherit;
   font-size: 1rem;
 }
 
@@ -387,13 +240,87 @@ p {
   background-color: var(--task3);
 }
 
+.progress-bar-container {
+  height: 10px;
+  background-color: #eee;
+  border-radius: 5px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+h1, h2, h3 {
+  font-family: "Space Mono", "IBM Plex Mono", monospace;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.8em;
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  border-bottom: 3px dotted var(--secondary);
+  padding-bottom: 15px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h2 {
+  color: var(--secondary);
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 25px;
+  background: var(--primary);
+  margin-right: 15px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 1.2em;
+  font-size: 1.05rem;
+}
+
+.lesson-badge {
+  display: inline-block;
+  background: var(--secondary);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
 .section-banner {
   margin: 25px 0;
-  padding: 18px 25px;
+  padding: 15px 20px;
   border-radius: 10px;
   text-align: center;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   position: relative;
   overflow: hidden;
@@ -409,7 +336,7 @@ p {
 }
 
 .task1-banner {
-  background-color: var(--task1-light);
+  background-color: var(--task1-banner);
   border: 2px solid var(--task1);
   color: var(--task1);
 }
@@ -419,7 +346,7 @@ p {
 }
 
 .task2-banner {
-  background-color: var(--task2-light);
+  background-color: var(--task2-banner);
   border: 2px solid var(--task2);
   color: var(--task2);
 }
@@ -429,7 +356,7 @@ p {
 }
 
 .task3-banner {
-  background-color: var(--task3-light);
+  background-color: var(--task3-banner);
   border: 2px solid var(--task3);
   color: var(--task3);
 }
@@ -438,6 +365,759 @@ p {
   background-color: var(--task3);
 }
 
+.workflow-box {
+  background: #f8f8f8;
+  margin: 30px 0;
+  border-radius: 15px;
+  border: 3px solid var(--secondary);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.workflow-header {
+  background: var(--secondary);
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.workflow-header h3 {
+  margin: 0;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.workflow-steps {
+  padding: 20px;
+}
+
+.step {
+  position: relative;
+  padding: 18px 18px 18px 50px;
+  background: white;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.step:last-child {
+  margin-bottom: 0;
+}
+
+.step-number {
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.step-title {
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.step-content ul, .step-content ol {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.step-content li {
+  margin-bottom: 6px;
+}
+
+.info-box {
+  background: #f8f9fa;
+  border-left: 5px solid var(--secondary);
+  padding: 15px 20px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.info-box strong {
+  color: var(--secondary);
+}
+
+.info-box ul {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.info-box li {
+  margin-bottom: 6px;
+}
+
+.important-notice {
+  margin: 20px 0; 
+  padding: 15px 20px; 
+  background: rgba(234, 55, 163, 0.15); 
+  border-left: 5px solid var(--primary); 
+  border-radius: 8px;
+}
+
+.important-notice strong {
+  color: var(--primary);
+}
+
+.tip-box {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 20px 0;
+}
+
+.tip-box h4 {
+  color: #856404;
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+}
+
+.tip-box ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.tip-box li {
+  margin-bottom: 6px;
+}
+
+.checklist {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 25px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border: 2px solid var(--secondary);
+}
+
+.checklist h3 {
+  color: var(--secondary);
+  margin-top: 0;
+  text-align: center;
+  margin-bottom: 15px;
+  border-bottom: 2px dashed var(--secondary);
+  padding-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.checklist-item {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.checklist-checkbox {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--secondary);
+  border-radius: 5px;
+  margin-right: 12px;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.checklist-checkbox:hover {
+  background: var(--secondary-light);
+}
+
+.checklist-checkbox.checked::after {
+  content: "✓";
+  position: absolute;
+  color: var(--secondary);
+  font-size: 16px;
+  top: -2px;
+  left: 3px;
+  font-weight: bold;
+}
+
+.checklist-text {
+  flex-grow: 1;
+}
+
+.checklist-label {
+  font-weight: bold;
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+.shortcut {
+  display: inline-block;
+  padding: 2px 8px;
+  background: #f2f2f2;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+  margin: 0 2px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  overflow: auto;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid white;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.close:hover {
+  color: #bbb;
+}
+
+.clickable-image {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.clickable-image:hover {
+  transform: scale(1.02);
+}
+
+.example-image {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.example-image:hover {
+  transform: scale(1.02);
+}
+
+.print-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  font-size: 22px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.print-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+@media print {
+  .print-button, .nav-buttons, .main-navigation, .progress-bar-container {
+    display: none;
+  }
+  
+  body {
+    background: white;
+  }
+  
+  .container {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    max-width: 100%;
+  }
+  
+  .content-section {
+    display: block !important;
+    page-break-before: always;
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  color: #777;
+  font-size: 0.85rem;
+  border-top: 1px dashed var(--primary);
+}
+
+.connection-box {
+  background: linear-gradient(135deg, #f0f9ff 0%, #fff 100%);
+  border: 2px solid var(--secondary);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 25px 0;
+}
+
+.connection-box h4 {
+  color: var(--secondary);
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.connection-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.connection-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.connection-item .icon {
+  font-size: 1.2rem;
+}
+
+.image-caption {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.upload-box {
+  background: var(--task1-banner);
+  border: 2px solid var(--task1);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.upload-box h3 {
+  color: var(--task1);
+  margin: 0 0 15px 0;
+}
+
+.upload-box p {
+  margin: 0 0 15px 0;
+}
+
+.upload-btn {
+  display: inline-block;
+  background: var(--task1);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(10, 128, 128, 0.3);
+}
+
+.three-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 25px 0;
+}
+
+.column-card {
+  background: white;
+  border: 2px solid var(--secondary);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.column-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.column-card h4 {
+  color: var(--secondary);
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.column-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.reference-example {
+  background: #f9f9f9;
+  border: 2px dashed var(--task2);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.reference-example h4 {
+  color: var(--task2);
+  margin: 0 0 15px 0;
+  font-size: 1rem;
+}
+
+.reference-example code {
+  display: block;
+  background: white;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  border-left: 4px solid var(--task2);
+}
+
+.reference-example .label {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.reflection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.reflection-card {
+  background: white;
+  border: 2px solid var(--task3);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.reflection-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(196, 92, 74, 0.2);
+}
+
+.reflection-card .number {
+  width: 40px;
+  height: 40px;
+  background: var(--task3);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 auto 12px;
+}
+
+.reflection-card h4 {
+  color: var(--task3);
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+}
+
+.reflection-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.tool-preview {
+  background: linear-gradient(135deg, var(--task3-light) 0%, #fff 100%);
+  border: 2px solid var(--task3);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.tool-preview h3 {
+  color: var(--task3);
+  margin: 0 0 15px 0;
+}
+
+.tool-preview p {
+  margin: 0 0 20px 0;
+  color: #555;
+}
+
+.tool-btn {
+  display: inline-block;
+  background: var(--task3);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(196, 92, 74, 0.3);
+}
+
+.tool-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(196, 92, 74, 0.4);
+}
+
+.tool-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.tool-feature {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.tool-feature .icon {
+  font-size: 1.3rem;
+}
+
+/* Workshop structure */
+.workshop-structure {
+  background: linear-gradient(135deg, #f8f8f8 0%, #fff 100%);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  border: 2px solid var(--secondary);
+}
+
+.workshop-structure h3 {
+  text-align: center;
+  margin-top: 0;
+  color: var(--secondary);
+}
+
+.structure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.structure-item {
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.structure-item h4 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+}
+
+.structure-item p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.structure-task1 {
+  border-left-color: var(--task1);
+}
+
+.structure-task1 h4 {
+  color: var(--task1);
+}
+
+.structure-task2 {
+  border-left-color: var(--task2);
+}
+
+.structure-task2 h4 {
+  color: var(--task2);
+}
+
+.structure-task3 {
+  border-left-color: var(--task3);
+}
+
+.structure-task3 h4 {
+  color: var(--task3);
+}
+
+/* Process flow */
+.process-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+  padding: 25px;
+  background: linear-gradient(135deg, #f8f8f8 0%, #fff 100%);
+  border-radius: 15px;
+  border: 2px solid #e0e0e0;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  min-width: 80px;
+}
+
+.process-step-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.process-step-icon.task1 {
+  background: linear-gradient(135deg, var(--task1), #26a69a);
+  color: white;
+}
+
+.process-step-icon.task2 {
+  background: linear-gradient(135deg, var(--task2), #8b7cb3);
+  color: white;
+}
+
+.process-step-icon.task3 {
+  background: linear-gradient(135deg, var(--task3), #d4806f);
+  color: white;
+}
+
+.process-step-label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.process-arrow {
+  font-size: 1.3rem;
+  color: #bbb;
+}
+
+/* Objective box */
+.objective-box {
+  background: linear-gradient(135deg, var(--secondary-light) 0%, #fff 100%);
+  border: 3px solid var(--secondary);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 25px 0;
+}
+
+.objective-box h3 {
+  color: var(--secondary);
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.objective-box ul {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.objective-box li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* Time box */
+.time-box {
+  background: linear-gradient(135deg, #fff8e1 0%, #fff 100%);
+  border: 2px solid #ffc107;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.time-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.time-content h4 {
+  color: #f57c00;
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.time-content p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Quick reference */
 .quick-reference-section {
   margin: 30px 0;
   border: 2px solid var(--purple);
@@ -464,7 +1144,7 @@ p {
 .quick-reference-header h3 {
   margin: 0;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .quick-reference-toggle {
@@ -476,7 +1156,7 @@ p {
 .quick-reference-content {
   display: none;
   padding: 0;
-  background: #f8f8ff;
+  background: var(--purple-light);
 }
 
 .quick-reference-content.open {
@@ -509,7 +1189,7 @@ p {
 .quick-ref-item h4 {
   color: var(--purple);
   margin: 0 0 8px 0;
-  font-size: 1.05rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -528,7 +1208,7 @@ p {
 
 .quick-ref-item p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #666;
   line-height: 1.5;
 }
@@ -545,249 +1225,11 @@ p {
   color: var(--purple);
   padding: 2px 8px;
   border-radius: 10px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: bold;
 }
 
-.objective-box {
-  background: linear-gradient(135deg, var(--secondary-light) 0%, #fff 100%);
-  border: 3px solid var(--secondary);
-  border-radius: 15px;
-  padding: 25px;
-  margin: 25px 0;
-}
-
-.objective-box h3 {
-  color: var(--secondary);
-  margin-top: 0;
-  font-size: 1.3rem;
-}
-
-.objective-box ul {
-  margin-left: 20px;
-  margin-top: 15px;
-}
-
-.objective-box li {
-  margin-bottom: 10px;
-  font-size: 1.05rem;
-}
-
-.time-box {
-  background: linear-gradient(135deg, #fff8e1 0%, #fff 100%);
-  border: 2px solid #ffc107;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 25px 0;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.time-icon {
-  font-size: 2.5rem;
-  flex-shrink: 0;
-}
-
-.time-content h4 {
-  color: #f57c00;
-  margin: 0 0 5px 0;
-  font-size: 1.1rem;
-}
-
-.time-content p {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.workflow-box {
-  background: #f8f8f8;
-  margin: 30px 0;
-  border-radius: 15px;
-  border: 3px solid var(--secondary);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  overflow: hidden;
-}
-
-.workflow-header {
-  background: var(--secondary);
-  color: white;
-  padding: 15px 20px;
-  text-align: center;
-}
-
-.workflow-header h3 {
-  margin: 0;
-  color: white;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-.workflow-header.task1-header {
-  background: var(--task1);
-}
-
-.workflow-header.task2-header {
-  background: var(--task2);
-}
-
-.workflow-header.task3-header {
-  background: var(--task3);
-}
-
-.workflow-steps {
-  padding: 20px 25px;
-}
-
-.step {
-  position: relative;
-  padding: 20px 20px 20px 55px;
-  background: white;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
-
-.step:last-child {
-  margin-bottom: 0;
-}
-
-.step-number {
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 42px;
-  height: 42px;
-  background: var(--primary);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.step-number.task1-num {
-  background: var(--task1);
-}
-
-.step-number.task2-num {
-  background: var(--task2);
-}
-
-.step-number.task3-num {
-  background: var(--task3);
-}
-
-.step-title {
-  color: var(--primary);
-  font-size: 1.15rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.step-title.task1-title {
-  color: var(--task1);
-}
-
-.step-title.task2-title {
-  color: var(--task2);
-}
-
-.step-title.task3-title {
-  color: var(--task3);
-}
-
-.step-content ul, .step-content ol {
-  margin-left: 20px;
-  margin-bottom: 10px;
-}
-
-.step-content li {
-  margin-bottom: 8px;
-}
-
-.reference-box {
-  background: linear-gradient(135deg, #fff3e0 0%, #fff 100%);
-  border: 2px solid #ff9800;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 25px 0;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.reference-box h4 {
-  color: #ff9800;
-  margin-top: 0;
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-}
-
-.reference-box code {
-  background: #f5f5f5;
-  padding: 12px 15px;
-  border-radius: 8px;
-  display: block;
-  margin: 10px 0;
-  font-family: 'Courier New', monospace;
-  font-size: 0.95rem;
-  border-left: 4px solid #ff9800;
-}
-
-/* Visual Example Styles */
-.visual-example {
-  margin: 30px 0;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-}
-
-.visual-example-header {
-  padding: 12px 20px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.visual-example-header.good {
-  background: linear-gradient(135deg, #43a047, #66bb6a);
-  color: white;
-}
-
-.visual-example-header.bad {
-  background: linear-gradient(135deg, #e53935, #ef5350);
-  color: white;
-}
-
-.visual-example-header.neutral {
-  background: linear-gradient(135deg, var(--secondary), #26a69a);
-  color: white;
-}
-
-.visual-example-content {
-  background: #f9f9f9;
-  padding: 20px;
-}
-
-.visual-example-image {
-  width: 100%;
-  border-radius: 8px;
-  border: 2px solid #e0e0e0;
-}
-
-.visual-example-caption {
-  margin-top: 12px;
-  font-size: 0.95rem;
-  color: #555;
-  font-style: italic;
-  text-align: center;
-}
-
-/* Comparison Grid */
+/* Comparison grid */
 .comparison-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -798,6 +1240,19 @@ p {
 @media (max-width: 768px) {
   .comparison-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .time-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .process-flow {
+    flex-direction: column;
+  }
+  
+  .process-arrow {
+    transform: rotate(90deg);
   }
 }
 
@@ -838,40 +1293,7 @@ p {
   margin-bottom: 10px;
 }
 
-/* Placeholder Image Styles */
-.placeholder-image {
-  width: 100%;
-  aspect-ratio: 16/10;
-  background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 50%, #e0e0e0 100%);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #888;
-  font-size: 1rem;
-  text-align: center;
-  padding: 20px;
-  border: 2px dashed #ccc;
-}
-
-.placeholder-image .icon {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  opacity: 0.6;
-}
-
-.placeholder-image .label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.placeholder-image .description {
-  font-size: 0.85rem;
-  opacity: 0.8;
-}
-
-/* Subtitle Examples Visual */
+/* Subtitle examples */
 .subtitle-visual-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -894,7 +1316,7 @@ p {
 .subtitle-visual-header {
   padding: 15px 20px;
   font-weight: bold;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -920,8 +1342,7 @@ p {
   padding: 12px 18px;
   border-radius: 8px;
   margin-bottom: 12px;
-  font-family: 'Georgia', serif;
-  font-size: 1.05rem;
+  font-size: 1rem;
   position: relative;
   border-left: 4px solid;
   transition: transform 0.2s ease;
@@ -955,68 +1376,7 @@ p {
   color: #666;
 }
 
-/* Process Flow Visual */
-.process-flow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin: 30px 0;
-  flex-wrap: wrap;
-  padding: 25px;
-  background: linear-gradient(135deg, #f8f8f8 0%, #fff 100%);
-  border-radius: 15px;
-  border: 2px solid #e0e0e0;
-}
-
-.process-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 15px;
-  min-width: 100px;
-}
-
-.process-step-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.process-step-icon.task1 {
-  background: linear-gradient(135deg, var(--task1), #26a69a);
-  color: white;
-}
-
-.process-step-icon.task2 {
-  background: linear-gradient(135deg, var(--task2), #f06292);
-  color: white;
-}
-
-.process-step-icon.task3 {
-  background: linear-gradient(135deg, var(--task3), #ff8a65);
-  color: white;
-}
-
-.process-step-label {
-  font-size: 0.85rem;
-  font-weight: bold;
-  color: #555;
-}
-
-.process-arrow {
-  font-size: 1.5rem;
-  color: #bbb;
-}
-
-/* Integration Example */
+/* Integration example */
 .integration-example {
   margin: 30px 0;
   border: 3px solid var(--task2);
@@ -1029,7 +1389,7 @@ p {
   color: white;
   padding: 15px 20px;
   font-weight: bold;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 
@@ -1038,7 +1398,7 @@ p {
   grid-template-columns: 1fr auto 1fr;
   gap: 20px;
   padding: 25px;
-  background: #fdf1f5;
+  background: var(--task2-light);
   align-items: center;
 }
 
@@ -1066,301 +1426,45 @@ p {
   color: var(--task2);
 }
 
-.integration-placeholder {
-  width: 100%;
-  aspect-ratio: 4/3;
-  background: white;
-  border: 2px dashed #ccc;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #888;
-  padding: 15px;
-}
-
-.integration-placeholder .icon {
-  font-size: 2.5rem;
-  margin-bottom: 8px;
-}
-
-.integration-placeholder .text {
-  font-size: 0.9rem;
-  text-align: center;
-}
-
-/* Tip box */
-.tip-box {
-  background: linear-gradient(135deg, #e8f5e9 0%, #fff 100%);
-  border: 2px solid #28a745;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 25px 0;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.tip-box h4 {
-  color: #28a745;
-  margin-top: 0;
-  font-size: 1.15rem;
-  margin-bottom: 12px;
-}
-
-.tip-box ul {
-  margin-left: 20px;
-}
-
-.tip-box li {
-  margin-bottom: 8px;
-}
-
-.important-notice {
-  margin: 25px 0;
-  padding: 18px 22px;
-  background: rgba(234, 55, 163, 0.12);
-  border-left: 5px solid var(--primary);
-  border-radius: 8px;
-  font-size: 1.05rem;
-}
-
-.important-notice strong {
-  color: var(--primary);
-}
-
-.upload-section {
-  background: linear-gradient(135deg, var(--task1-light) 0%, #fff 100%);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+/* Visual example */
+.visual-example {
   margin: 30px 0;
-  border: 3px solid var(--task1);
-  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.12);
 }
 
-.upload-section.task2-upload {
-  background: linear-gradient(135deg, var(--task2-light) 0%, #fff 100%);
-  border-color: var(--task2);
-}
-
-.upload-section.task3-upload {
-  background: linear-gradient(135deg, var(--task3-light) 0%, #fff 100%);
-  border-color: var(--task3);
-}
-
-.upload-section h3 {
-  margin-top: 0;
-  font-size: 1.4rem;
-}
-
-.upload-section.task1-upload h3 {
-  color: var(--task1);
-}
-
-.upload-section.task2-upload h3 {
-  color: var(--task2);
-}
-
-.upload-section.task3-upload h3 {
-  color: var(--task3);
-}
-
-.btn-upload {
-  display: inline-block;
-  padding: 15px 35px;
-  border-radius: 10px;
-  text-decoration: none;
+.visual-example-header {
+  padding: 12px 20px;
   font-weight: bold;
-  font-size: 1.15rem;
-  margin: 10px 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-  color: white;
-}
-
-.btn-upload:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
-.btn-task1 {
-  background: var(--task1);
-}
-
-.btn-task2 {
-  background: var(--task2);
-}
-
-.btn-task3 {
-  background: var(--task3);
-}
-
-.btn-progress {
-  background: var(--purple);
-}
-
-.shortcut {
-  display: inline-block;
-  padding: 3px 10px;
-  background: #f2f2f2;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-family: monospace;
-  font-size: 0.95em;
-  margin: 0 2px;
-  box-shadow: 0 2px 3px rgba(0,0,0,0.1);
-}
-
-.checklist-reminder {
-  background: linear-gradient(135deg, #e3f2fd 0%, #fff 100%);
-  border: 2px solid #1976d2;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 25px 0;
-}
-
-.checklist-reminder h4 {
-  color: #1976d2;
-  margin-top: 0;
-  font-size: 1.15rem;
-  margin-bottom: 12px;
-}
-
-.checklist-reminder ul {
-  margin-left: 20px;
-}
-
-.checklist-reminder li {
-  margin-bottom: 8px;
-}
-
-.print-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--secondary);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  font-size: 24px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
 }
 
-.print-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+.visual-example-header.neutral {
+  background: linear-gradient(135deg, var(--secondary), #26a69a);
+  color: white;
 }
 
-/* Image Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
+.visual-example-content {
+  background: #f9f9f9;
+  padding: 20px;
+}
+
+.visual-example-image {
   width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.9);
-  overflow: auto;
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 90%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: 3px solid white;
   border-radius: 8px;
+  border: 2px solid #e0e0e0;
 }
 
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.close:hover {
-  color: #bbb;
-}
-
-@media print {
-  .print-button, .main-navigation, .nav-buttons {
-    display: none;
-  }
-  
-  body {
-    background: white;
-  }
-  
-  .container {
-    box-shadow: none;
-    border: none;
-    padding: 0;
-    max-width: 100%;
-  }
-  
-  .content-section {
-    display: block !important;
-    page-break-before: always;
-  }
-}
-
-@media (max-width: 768px) {
-  .main-navigation {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .workflow-steps {
-    padding: 15px;
-  }
-  
-  .step {
-    padding: 15px 15px 15px 45px;
-  }
-  
-  .step-number {
-    width: 35px;
-    height: 35px;
-    left: -8px;
-    font-size: 1rem;
-  }
-  
-  .quick-reference-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .time-box {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .structure-grid {
-    flex-direction: column;
-  }
-  
-  .process-flow {
-    flex-direction: column;
-  }
-  
-  .process-arrow {
-    transform: rotate(90deg);
-  }
+.visual-example-caption {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+  text-align: center;
 }
 </style>
 </head>
@@ -1368,12 +1472,12 @@ p {
 
 <div class="container">
   <span class="lesson-badge">LESSON 1 OF 3</span>
-  <h1>Research Page Development</h1>
-  <p style="text-align: center; font-size: 1.15rem; color: #666; margin-bottom: 25px;">Adding Secondary Research with Factual Content & Digital Integration</p>
+  <h1>📚 Research Page Development</h1>
+  <p style="text-align: center; font-size: 1.05rem; color: #666;">Adding Secondary Research with Factual Content & Digital Integration</p>
 
-  <!-- Workshop Structure Overview -->
+  <!-- Workshop Structure -->
   <div class="workshop-structure">
-    <h3>Workshop Structure (2.5 hours)</h3>
+    <h3>⏰ Workshop Structure (2.5 hours)</h3>
     <div class="structure-grid">
       <div class="structure-item structure-task1">
         <h4>TASK 1 (45 mins)</h4>
@@ -1390,7 +1494,7 @@ p {
     </div>
   </div>
 
-  <!-- Visual Process Flow -->
+  <!-- Process Flow -->
   <div class="process-flow">
     <div class="process-step">
       <div class="process-step-icon task1">🔍</div>
@@ -1423,27 +1527,27 @@ p {
     <div class="progress-bar" id="progressBar"></div>
   </div>
 
-  <!-- Navigation blocks -->
+  <!-- Navigation -->
   <div class="main-navigation">
-    <div class="nav-block nav-overview active-block" data-section="overview">
-      <h4>Overview</h4>
+    <div class="nav-block nav-overview" data-section="overview">
+      <h3>Overview</h3>
       <p>Introduction</p>
     </div>
     <div class="nav-block nav-task1" data-section="task1">
-      <h4>Task 1</h4>
+      <h3>Task 1</h3>
       <p>45 mins</p>
     </div>
     <div class="nav-block nav-task2" data-section="task2">
-      <h4>Task 2</h4>
+      <h3>Task 2</h3>
       <p>75 mins</p>
     </div>
     <div class="nav-block nav-task3" data-section="task3">
-      <h4>Task 3</h4>
+      <h3>Task 3</h3>
       <p>30 mins</p>
     </div>
   </div>
 
-  <!-- ==================== OVERVIEW SECTION ==================== -->
+  <!-- ==================== OVERVIEW ==================== -->
   <div id="overview" class="content-section active">
     
     <div class="objective-box">
@@ -1461,26 +1565,24 @@ p {
     <h2>Why This Matters</h2>
     <p>Research pages are the foundation of your portfolio. They demonstrate your ability to investigate, understand, and articulate ideas. Vague subtitles like "Textures" or "Colours" tell the examiner nothing about your specific research focus. Strong research pages include factual content that shows genuine understanding.</p>
 
-    <!-- Visual Example: Research Page Structure -->
+    <!-- Visual Example -->
     <div class="visual-example">
       <div class="visual-example-header neutral">
         📐 Research Page Structure
       </div>
       <div class="visual-example-content">
         <img src="images/research-page-structure.jpg" 
-            alt="Research page structure example showing subtitle, secondary image, quote and Harvard reference" 
-            class="visual-example-image"
-            style="cursor: pointer;"
+            alt="Research page structure example" 
+            class="visual-example-image clickable-image"
             onclick="openModal(this.src)">
         <p class="visual-example-caption"><strong>Research Page Example: Pritika Ahuja</strong><br>Shows: Clear subtitle • Secondary image • Factual text with quote • Harvard reference • Digital integration</p>
-        <p class="visual-example-caption">A strong research page combines physical work with digitally integrated secondary research, proper referencing, and specific subtitles.</p>
       </div>
     </div>
 
-    <!-- Quick Reference Guide -->
     <h2>Choose Your Digital Skill</h2>
     <p>Before starting, review the skills from previous workshops. You'll choose <strong>ONE</strong> technique to use in Task 2 when integrating your research into your scanned A3 page.</p>
 
+    <!-- Quick Reference -->
     <div class="quick-reference-section">
       <div class="quick-reference-header" onclick="toggleQuickReference()">
         <h3>📚 Quick Reference: Previous Workshop Skills</h3>
@@ -1494,7 +1596,7 @@ p {
               <p>High-contrast effects with Threshold, text on path, blend modes</p>
               <div class="quick-ref-tags">
                 <span class="quick-ref-tag">Threshold</span>
-                <span class="quick-ref-tag">Text on Path: Tong He </span>
+                <span class="quick-ref-tag">Text on Path</span>
               </div>
             </a>
           </div>
@@ -1592,7 +1694,6 @@ p {
 
     <div class="tip-box">
       <h4>💡 Decision Point</h4>
-      <p>Take a moment now to decide:</p>
       <ul>
         <li><strong>Which research page</strong> in your portfolio needs additional secondary research?</li>
         <li><strong>Which digital skill</strong> from the list above will you use to integrate your new content?</li>
@@ -1605,7 +1706,7 @@ p {
     </div>
   </div>
 
-  <!-- ==================== TASK 1 SECTION ==================== -->
+  <!-- ==================== TASK 1 ==================== -->
   <div id="task1" class="content-section">
     <div class="section-banner task1-banner">
       TASK 1: Secondary Image, Quote & Reference (45 minutes)
@@ -1622,7 +1723,6 @@ p {
     <h2>What You Need to Do</h2>
     <p>Find a <strong>secondary research image</strong> that supports and expands on your existing research page. This should add depth to your investigation, not simply repeat what you already have.</p>
 
-    <!-- Subtitle Visual Examples -->
     <h3>Writing a Strong Subtitle</h3>
     <p>Your subtitle must clearly articulate your specific area of research focus — not a vague label.</p>
 
@@ -1637,7 +1737,7 @@ p {
           <div class="subtitle-example-item bad">Artist Research</div>
           <div class="subtitle-example-item bad">Materials</div>
           <div class="subtitle-note">
-            <strong>Why these fail:</strong> They could apply to any project and reveal nothing about your specific research direction or understanding.
+            <strong>Why these fail:</strong> They could apply to any project and reveal nothing about your specific research direction.
           </div>
         </div>
       </div>
@@ -1652,23 +1752,22 @@ p {
           <div class="subtitle-example-item good">Iris van Herpen's Kinetic Couture</div>
           <div class="subtitle-example-item good">Mycelium as Leather Alternative</div>
           <div class="subtitle-note">
-            <strong>Why these work:</strong> They demonstrate specific knowledge, clear research focus, and genuine understanding of your theme.
+            <strong>Why these work:</strong> They demonstrate specific knowledge, clear research focus, and genuine understanding.
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Visual Example: Good vs Bad Research Pages -->
+    <!-- Comparison -->
     <div class="comparison-grid">
       <div class="comparison-item">
         <div class="comparison-item-header bad">❌ Weak Research Example</div>
         <div class="comparison-item-body">
           <img src="images/weak-research-example.jpg" 
-              alt="Weak research page with vague subtitle and no references" 
-              style="width: 100%; border-radius: 6px; cursor: pointer;"
+              alt="Weak research page" 
+              class="clickable-image"
               onclick="openModal(this.src)">
-          <p style="margin: 10px 0 0; font-size: 0.9rem; color: #c62828; text-align: center;"><strong>Weak Research Page</strong><br>Vague subtitle • No quote • No reference • Random image placement</p>
-          <p style="margin: 5px 0 0; font-size: 0.85rem; color: #c62828;">Missing: specific focus, factual content, proper attribution</p>
+          <p style="margin: 10px 0 0; font-size: 0.85rem; color: #c62828; text-align: center;"><strong>Weak Research Page</strong><br>Vague subtitle • No quote • No reference</p>
         </div>
       </div>
       
@@ -1676,37 +1775,36 @@ p {
         <div class="comparison-item-header good">✓ Strong Research Example</div>
         <div class="comparison-item-body">
           <img src="images/strong-research-example.jpg" 
-              alt="Strong research page with specific subtitle, quote and Harvard reference" 
-              style="width: 100%; border-radius: 6px; cursor: pointer;"
+              alt="Strong research page" 
+              class="clickable-image"
               onclick="openModal(this.src)">
-          <p style="margin: 10px 0 0; font-size: 0.9rem; color: #2e7d32; text-align: center;"><strong>Strong Research Page</strong><br>Specific subtitle • Relevant quote • Harvard reference • Purposeful layout</p>
-          <p style="margin: 5px 0 0; font-size: 0.85rem; color: #2e7d32;">Includes: clear research direction, evidence of understanding, proper citation</p>
+          <p style="margin: 10px 0 0; font-size: 0.85rem; color: #2e7d32; text-align: center;"><strong>Strong Research Page</strong><br>Specific subtitle • Relevant quote • Harvard reference</p>
         </div>
       </div>
     </div>
 
-    <!-- Reference Format -->
-    <div class="reference-box">
+    <div class="reference-example">
       <h4>📚 Harvard Referencing Format</h4>
-      <p><strong>For your image reference:</strong></p>
+      
+      <div class="label">For an image:</div>
       <code>Artist's Last Name, First Initial. (Year). <em>Title of the work</em> [Image].</code>
-      <p><strong>Example:</strong></p>
+      
+      <div class="label">Example:</div>
       <code>van Herpen, I. (2019). <em>Hypnosis Collection</em> [Image].</code>
-      <p><strong>For your quote:</strong></p>
+      
+      <div class="label">For a quote:</div>
       <code>"Quote text here" (Author's Last Name, Year, p. Page Number).</code>
-      <p><strong>Example:</strong></p>
-      <code>"Fashion should be a form of escapism, and not a form of imprisonment" (McQueen, 2010, p. 45).</code>
     </div>
 
     <!-- Workflow -->
     <div class="workflow-box" style="border-color: var(--task1);">
-      <div class="workflow-header task1-header">
+      <div class="workflow-header" style="background: var(--task1);">
         <h3>Task 1 Workflow</h3>
       </div>
       <div class="workflow-steps">
         <div class="step">
-          <div class="step-number task1-num">1</div>
-          <div class="step-title task1-title">Find Your Secondary Image</div>
+          <div class="step-number" style="background: var(--task1);">1</div>
+          <div class="step-title" style="color: var(--task1);">Find Your Secondary Image</div>
           <div class="step-content">
             <p>Search for an image that:</p>
             <ul>
@@ -1714,39 +1812,38 @@ p {
               <li>Comes from a credible source (artist website, museum, academic source)</li>
               <li>Has clear attribution information (artist name, year, title)</li>
             </ul>
-            <p><strong>Good sources:</strong> Museum websites, artist portfolios, academic journals, design archives</p>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number task1-num">2</div>
-          <div class="step-title task1-title">Write Your Subtitle</div>
+          <div class="step-number" style="background: var(--task1);">2</div>
+          <div class="step-title" style="color: var(--task1);">Write Your Subtitle</div>
           <div class="step-content">
             <p>Create a subtitle that clearly states what aspect of your research this image represents. Ask yourself: "If someone only read this subtitle, would they understand my specific focus?"</p>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number task1-num">3</div>
-          <div class="step-title task1-title">Write Factual Content with Quote</div>
+          <div class="step-number" style="background: var(--task1);">3</div>
+          <div class="step-title" style="color: var(--task1);">Write Factual Content with Quote</div>
           <div class="step-content">
-            <p>Write 2-3 sentences of factual content about your image/research area. Include at least one quote from a relevant source. This should demonstrate understanding, not just description.</p>
+            <p>Write 2-3 sentences of factual content about your image/research area. Include at least one quote from a relevant source.</p>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number task1-num">4</div>
-          <div class="step-title task1-title">Format Your Reference</div>
+          <div class="step-number" style="background: var(--task1);">4</div>
+          <div class="step-title" style="color: var(--task1);">Format Your Reference</div>
           <div class="step-content">
-            <p>Write the Harvard reference for your image and for any quotes you've included. Double-check the format against the examples above.</p>
+            <p>Write the Harvard reference for your image and for any quotes you've included.</p>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number task1-num">5</div>
-          <div class="step-title task1-title">Upload to Padlet</div>
+          <div class="step-number" style="background: var(--task1);">5</div>
+          <div class="step-title" style="color: var(--task1);">Upload to Padlet</div>
           <div class="step-content">
-            <p>Upload your secondary image along with your subtitle, factual content, quote, and references to Padlet. Add your name as the title.</p>
+            <p>Upload your secondary image along with your subtitle, factual content, quote, and references to Padlet.</p>
           </div>
         </div>
       </div>
@@ -1756,22 +1853,20 @@ p {
       <strong>Important:</strong> Your subtitle, quote, and reference will be digitally integrated into your scanned A3 page in Task 2. Make sure you have all elements ready before uploading.
     </div>
 
-    <!-- Upload Section -->
-    <div class="upload-section task1-upload">
+    <!-- Upload box -->
+    <div class="upload-box">
       <h3>📤 Upload Task 1</h3>
       <p>Upload your secondary image with subtitle, factual content (including quote), and Harvard reference.</p>
-      <a href="https://padlet.com/artslondon/week-9-portfolio-checklist-game-and-document-your-practice-ejw4hqwg3sxmpsj" target="_blank" class="btn-upload btn-task1">
-        Upload to Padlet →
-      </a>
+      <a href="https://padlet.com/artslondon/week-9-portfolio-checklist-game-and-document-your-practice-ejw4hqwg3sxmpsj" target="_blank" class="upload-btn">Upload to Padlet →</a>
     </div>
 
     <div class="nav-buttons">
-      <button class="nav-btn prev-btn" onclick="goToSection('overview')">Previous: Overview</button>
+      <button class="nav-btn prev-btn" onclick="goToSection('overview')">Previous</button>
       <button class="nav-btn next-btn task2-next" onclick="goToSection('task2')">Next: Task 2</button>
     </div>
   </div>
 
-  <!-- ==================== TASK 2 SECTION ==================== -->
+  <!-- ==================== TASK 2 ==================== -->
   <div id="task2" class="content-section">
     <div class="section-banner task2-banner">
       TASK 2: Digital Integration into Scanned A3 (75 minutes)
@@ -1788,14 +1883,14 @@ p {
     <h2>What You Need to Do</h2>
     <p>Take your <strong>physical A3 research page</strong> (or a page in progress), scan it, and digitally integrate your new secondary image, subtitle, quote, and reference using a digital skill from the workshop series.</p>
 
-    <!-- Visual: Before & After Integration -->
+    <!-- Integration Example -->
     <div class="integration-example">
       <div class="integration-example-header">
         🎨 The Integration Process
       </div>
       <div class="integration-example-body">
         <div class="integration-before">
-          <h4>BEFORE: Scanned Physical Page: Siying Lu</h4>
+          <h4>BEFORE: Scanned Physical Page</h4>
           <img src="images/integration-before.jpg" 
               alt="Scanned A3 page before digital integration" 
               style="width: 100%; border-radius: 10px; cursor: pointer;"
@@ -1806,9 +1901,9 @@ p {
         <div class="integration-arrow">➡️</div>
         
         <div class="integration-after">
-          <h4>AFTER: Digitally Enhanced: Siying Lu</h4>
+          <h4>AFTER: Digitally Enhanced</h4>
           <img src="images/integration-after.jpg" 
-              alt="A3 page after digital integration with secondary image and text" 
+              alt="A3 page after digital integration" 
               style="width: 100%; border-radius: 10px; cursor: pointer;"
               onclick="openModal(this.src)">
           <p style="margin-top: 8px; font-size: 0.85rem; color: #666; text-align: center;">Physical + Digital: Secondary image, subtitle, quote & reference integrated</p>
@@ -1816,29 +1911,56 @@ p {
       </div>
     </div>
 
-    <div class="checklist-reminder">
-      <h4>📋 Before You Start, Make Sure You Have:</h4>
-      <ul>
-        <li>Your secondary image saved to your computer</li>
-        <li>Your subtitle written and ready</li>
-        <li>Your factual content and quote typed up</li>
-        <li>Your Harvard reference formatted correctly</li>
-        <li>A physical A3 page to scan (or existing scan)</li>
-        <li>Decided which digital skill you will use</li>
-      </ul>
+    <div class="checklist">
+      <h3>📋 Before You Start, Make Sure You Have:</h3>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Your secondary image saved to your computer</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Your subtitle written and ready</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Your factual content and quote typed up</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Your Harvard reference formatted correctly</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">A physical A3 page to scan (or existing scan)</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Decided which digital skill you will use</div>
+        </div>
+      </div>
     </div>
 
-    <!-- Visual Examples of Digital Skills Applied -->
     <h3>Digital Skill Application Examples</h3>
     <div class="comparison-grid">
       <div class="comparison-item">
-        <div class="comparison-item-header good" style="background: var(--purple-light); color: var(--purple); border-color: var(--purple);">🖼️ Monoprint-Threshold-digital brushes</div>
+        <div class="comparison-item-header good" style="background: var(--purple-light); color: var(--purple); border-color: var(--purple);">🖼️ Threshold & Digital Brushes</div>
         <div class="comparison-item-body">
-          <img src="images/example-threshold-pattern brush-blend.jpg" 
-              alt="Monoprint/Threshold and pattern brush example" 
-              style="width: 100%; border-radius: 6px; cursor: pointer;"
+          <img src="images/example-threshold-pattern-brush-blend.jpg" 
+              alt="Threshold and pattern brush example" 
+              class="clickable-image"
               onclick="openModal(this.src)">
-          <p style="margin-top: 8px; font-size: 0.85rem; color: var(--purple); text-align: center;"><strong>Monoprint/Threshold-digital brushes example</strong><br>Turn Monoprints into digital brushes</p>
+          <p style="margin-top: 8px; font-size: 0.85rem; color: var(--purple); text-align: center;">Turn monoprints into digital brushes</p>
         </div>
       </div>
       
@@ -1846,10 +1968,10 @@ p {
         <div class="comparison-item-header good" style="background: var(--purple-light); color: var(--purple); border-color: var(--purple);">✍️ Text on Path</div>
         <div class="comparison-item-body">
           <img src="images/example-text-on-path.jpg" 
-              alt="Text on path example showing subtitle on curve" 
-              style="width: 100%; border-radius: 6px; cursor: pointer;"
+              alt="Text on path example" 
+              class="clickable-image"
               onclick="openModal(this.src)">
-          <p style="margin-top: 8px; font-size: 0.85rem; color: var(--purple); text-align: center;"><strong>Text on Path Example</strong><br>Subtitle following a curve or shape element</p>
+          <p style="margin-top: 8px; font-size: 0.85rem; color: var(--purple); text-align: center;">Subtitle following a curve or shape</p>
         </div>
       </div>
       
@@ -1857,10 +1979,10 @@ p {
         <div class="comparison-item-header good" style="background: var(--purple-light); color: var(--purple); border-color: var(--purple);">🤖 Generative Fill</div>
         <div class="comparison-item-body">
           <img src="images/example-generative-fill.jpg" 
-              alt="Generative fill subtitle background example" 
-              style="width: 100%; border-radius: 6px; cursor: pointer;"
+              alt="Generative fill example" 
+              class="clickable-image"
               onclick="openModal(this.src)">
-          <p style="margin-top: 8px; font-size: 0.85rem; color: var(--purple); text-align: center;"><strong>Generative Fill Example</strong><br>AI-created visual background for subtitle text</p>
+          <p style="margin-top: 8px; font-size: 0.85rem; color: var(--purple); text-align: center;">AI-created visual background for subtitle</p>
         </div>
       </div>
       
@@ -1868,79 +1990,74 @@ p {
         <div class="comparison-item-header good" style="background: var(--purple-light); color: var(--purple); border-color: var(--purple);">🔍 Enlarged Detail</div>
         <div class="comparison-item-body">
           <img src="images/example-enlarged-detail.jpg" 
-              alt="Enlarged detail from research image example" 
-              style="width: 100%; border-radius: 6px; cursor: pointer;"
+              alt="Enlarged detail example" 
+              class="clickable-image"
               onclick="openModal(this.src)">
-          <p style="margin-top: 8px; font-size: 0.85rem; color: var(--purple); text-align: center;"><strong>Detail Enlargement Example</strong><br>Key detail from research image scaled as focal point</p>
+          <p style="margin-top: 8px; font-size: 0.85rem; color: var(--purple); text-align: center;">Key detail scaled as focal point</p>
         </div>
       </div>
     </div>
 
     <!-- Workflow -->
     <div class="workflow-box" style="border-color: var(--task2);">
-      <div class="workflow-header task2-header">
+      <div class="workflow-header" style="background: var(--task2);">
         <h3>Task 2 Workflow</h3>
       </div>
       <div class="workflow-steps">
         <div class="step">
-          <div class="step-number task2-num">1</div>
-          <div class="step-title task2-title">Scan Your Physical A3 Page</div>
+          <div class="step-number" style="background: var(--task2);">1</div>
+          <div class="step-title" style="color: var(--task2);">Scan Your Physical A3 Page</div>
           <div class="step-content">
-            <p>If you haven't already, scan your physical research page at <strong>300 dpi</strong>. Save as TIFF or high-quality JPEG.</p>
-            <p><em>If you already have a scanned page or are working digitally, open your existing file.</em></p>
+            <p>Scan your physical research page at <strong>300 dpi</strong>. Save as TIFF or high-quality JPEG.</p>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number task2-num">2</div>
-          <div class="step-title task2-title">Open in Photoshop & Set Up Layers</div>
+          <div class="step-number" style="background: var(--task2);">2</div>
+          <div class="step-title" style="color: var(--task2);">Open in Photoshop & Set Up Layers</div>
           <div class="step-content">
-            <p>Open your scanned page in Photoshop. Create new layers for:</p>
+            <p>Create new layers for:</p>
             <ul>
               <li>Your secondary image</li>
               <li>Your subtitle text</li>
               <li>Your factual content and quote</li>
               <li>Your reference</li>
             </ul>
-            <p>Keeping elements on separate layers gives you flexibility to adjust positioning and effects.</p>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number task2-num">3</div>
-          <div class="step-title task2-title">Apply Your Chosen Digital Skill</div>
+          <div class="step-number" style="background: var(--task2);">3</div>
+          <div class="step-title" style="color: var(--task2);">Apply Your Chosen Digital Skill</div>
           <div class="step-content">
-            <p>Now apply the digital skill you chose from the Quick Reference guide. For example:</p>
+            <p>Apply the digital skill you chose from the Quick Reference guide:</p>
             <ul>
               <li><strong>Threshold effect</strong> on your secondary image for high contrast</li>
-              <li><strong>Text on path</strong> for your subtitle to follow a curve or shape</li>
-              <li><strong>Generative Fill</strong> to create a visual background for your subtitle</li>
-              <li><strong>Layer masks & blend modes</strong> to integrate image with existing page</li>
-              <li><strong>Enlarged detail</strong> from your image as a focal point</li>
-              <li><strong>Custom brush</strong> created from your research to add graphic elements</li>
+              <li><strong>Text on path</strong> for your subtitle to follow a curve</li>
+              <li><strong>Generative Fill</strong> to create a visual background</li>
+              <li><strong>Layer masks & blend modes</strong> to integrate image</li>
+              <li><strong>Custom brush</strong> to add graphic elements</li>
             </ul>
-            <p><strong>Refer to the workshop guide</strong> for your chosen skill if you need a refresher on the technique.</p>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number task2-num">4</div>
-          <div class="step-title task2-title">Position Text Elements</div>
+          <div class="step-number" style="background: var(--task2);">4</div>
+          <div class="step-title" style="color: var(--task2);">Position Text Elements</div>
           <div class="step-content">
-            <p>Add your subtitle, factual content, quote, and reference to the page. Remember typography guidelines:</p>
+            <p>Typography guidelines:</p>
             <ul>
               <li><strong>Body text:</strong> 12-14pt maximum</li>
               <li><strong>Subtitles:</strong> Different style, not just bigger size</li>
-              <li><strong>References:</strong> Can be smaller (9-10pt) and placed near the image</li>
+              <li><strong>References:</strong> Can be smaller (9-10pt) near the image</li>
             </ul>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number task2-num">5</div>
-          <div class="step-title task2-title">Refine & Export</div>
+          <div class="step-number" style="background: var(--task2);">5</div>
+          <div class="step-title" style="color: var(--task2);">Refine & Export</div>
           <div class="step-content">
-            <p>Review your page for visual balance and readability. Make adjustments as needed.</p>
             <p>Export as:</p>
             <ul>
               <li><strong>PSD</strong> — Save your working file with layers</li>
@@ -1957,26 +2074,24 @@ p {
         <li>Your digital additions should <strong>enhance</strong> the physical page, not overwhelm it</li>
         <li>Consider how the new elements <strong>relate visually</strong> to existing content</li>
         <li>Use <strong>consistent colour palette</strong> between physical and digital elements</li>
-        <li>The subtitle should be <strong>clearly readable</strong> — don't sacrifice legibility for style</li>
+        <li>The subtitle should be <strong>clearly readable</strong></li>
       </ul>
     </div>
 
-    <!-- Upload Section -->
-    <div class="upload-section task2-upload">
-      <h3>📤 Upload Task 2</h3>
+    <!-- Upload box -->
+    <div class="upload-box" style="background: var(--task2-banner); border-color: var(--task2);">
+      <h3 style="color: var(--task2);">📤 Upload Task 2</h3>
       <p>Upload your completed integrated A3 page showing your physical work combined with digital elements.</p>
-      <a href="https://padlet.com/artslondon/week-9-portfolio-checklist-game-and-document-your-practice-ejw4hqwg3sxmpsj" target="_blank" class="btn-upload btn-task2">
-        Upload to Padlet →
-      </a>
+      <a href="https://padlet.com/artslondon/week-9-portfolio-checklist-game-and-document-your-practice-ejw4hqwg3sxmpsj" target="_blank" class="upload-btn" style="background: var(--task2);">Upload to Padlet →</a>
     </div>
 
     <div class="nav-buttons">
-      <button class="nav-btn prev-btn" onclick="goToSection('task1')">Previous: Task 1</button>
+      <button class="nav-btn prev-btn" onclick="goToSection('task1')">Previous</button>
       <button class="nav-btn next-btn task3-next" onclick="goToSection('task3')">Next: Task 3</button>
     </div>
   </div>
 
-  <!-- ==================== TASK 3 SECTION ==================== -->
+  <!-- ==================== TASK 3 ==================== -->
   <div id="task3" class="content-section">
     <div class="section-banner task3-banner">
       TASK 3: Progress Report — Challenges & Learning (30 minutes)
@@ -1991,33 +2106,55 @@ p {
     </div>
 
     <h2>What You Need to Do</h2>
-    <p>Document your process from today's lesson. This progress report captures not just what you created, but <strong>what challenges you faced</strong> and <strong>what you learned</strong>. This reflective practice is essential for developing as a designer.</p>
+    <p>Document your process from today's lesson. This progress report captures not just what you created, but <strong>what challenges you faced</strong> and <strong>what you learned</strong>.</p>
 
-    <!-- Visual: Progress Report Structure -->
     <div class="visual-example">
-      <div class="visual-example-header" style="background: linear-gradient(135deg, var(--task3), #ff8a65);">
+      <div class="visual-example-header" style="background: linear-gradient(135deg, var(--task3), #d4806f);">
         📝 Progress Report Structure
       </div>
       <div class="visual-example-content">
         <img src="images/progress-report-example.jpg" 
-            alt="Progress report example with before/after screenshots and reflection" 
-            class="visual-example-image"
-            style="cursor: pointer;"
+            alt="Progress report example" 
+            class="visual-example-image clickable-image"
             onclick="openModal(this.src)">
         <p class="visual-example-caption"><strong>Progress Report Template</strong><br>Before screenshot • After screenshot • Challenges faced • Solutions tried • What you learned</p>
-        <p class="visual-example-caption">Your progress report should visually show your journey and honestly reflect on your learning process.</p>
+      </div>
+    </div>
+
+    <h2>The Four Reflection Questions</h2>
+    
+    <div class="reflection-grid">
+      <div class="reflection-card">
+        <div class="number">1</div>
+        <h4>Digital Skill Used</h4>
+        <p>Name the technique and workshop it came from</p>
+      </div>
+      <div class="reflection-card">
+        <div class="number">2</div>
+        <h4>Challenges Faced</h4>
+        <p>Technical difficulties, creative decisions, time management</p>
+      </div>
+      <div class="reflection-card">
+        <div class="number">3</div>
+        <h4>Solutions Tried</h4>
+        <p>What did you try? What worked?</p>
+      </div>
+      <div class="reflection-card">
+        <div class="number">4</div>
+        <h4>What You Learned</h4>
+        <p>New skills, insights, discoveries about your process</p>
       </div>
     </div>
 
     <!-- Workflow -->
     <div class="workflow-box" style="border-color: var(--task3);">
-      <div class="workflow-header task3-header">
+      <div class="workflow-header" style="background: var(--task3);">
         <h3>Task 3 Workflow</h3>
       </div>
       <div class="workflow-steps">
         <div class="step">
-          <div class="step-number task3-num">1</div>
-          <div class="step-title task3-title">Take Screenshots of Your Process</div>
+          <div class="step-number" style="background: var(--task3);">1</div>
+          <div class="step-title" style="color: var(--task3);">Take Screenshots of Your Process</div>
           <div class="step-content">
             <p>Capture screenshots showing:</p>
             <ul>
@@ -2025,42 +2162,32 @@ p {
               <li>Key stages of your digital integration process</li>
               <li>Your final completed page</li>
             </ul>
-            <p><strong>Mac:</strong> <span class="shortcut">Command (⌘) + Shift + 3</span> or <span class="shortcut">Command (⌘) + Shift + 4</span> for selection</p>
+            <p><strong>Mac:</strong> <span class="shortcut">⌘ + Shift + 3</span> or <span class="shortcut">⌘ + Shift + 4</span></p>
             <p><strong>Windows:</strong> <span class="shortcut">Windows + Shift + S</span></p>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number task3-num">2</div>
-          <div class="step-title task3-title">Open Progress Documentation Tool</div>
+          <div class="step-number" style="background: var(--task3);">2</div>
+          <div class="step-title" style="color: var(--task3);">Open Progress Documentation Tool</div>
           <div class="step-content">
             <p>Use the Progress Documentation Tool to compile your screenshots and write your reflection notes.</p>
-            <p style="margin-top: 10px;">
-              <a href="https://hsstokes.github.io/Progress_Documentation/" target="_blank" style="color: var(--task3); font-weight: bold;">Open Progress Documentation Tool →</a>
-            </p>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number task3-num">3</div>
-          <div class="step-title task3-title">Write Your Reflection</div>
+          <div class="step-number" style="background: var(--task3);">3</div>
+          <div class="step-title" style="color: var(--task3);">Write Your Reflection</div>
           <div class="step-content">
-            <p>Answer these questions in your progress report:</p>
-            <ul>
-              <li><strong>What digital skill did you use?</strong> Name the technique and workshop it came from.</li>
-              <li><strong>What challenges did you face?</strong> Be specific — technical difficulties, creative decisions, time management.</li>
-              <li><strong>How did you overcome them?</strong> What solutions did you try? What worked?</li>
-              <li><strong>What did you learn?</strong> New skills, insights about your research, discoveries about your process.</li>
-              <li><strong>What would you do differently?</strong> If you had more time or did this again, what would you change?</li>
-            </ul>
+            <p>Answer the four reflection questions thoughtfully. Be specific about your challenges and learning.</p>
           </div>
         </div>
         
         <div class="step">
-          <div class="step-number task3-num">4</div>
-          <div class="step-title task3-title">Export & Upload</div>
+          <div class="step-number" style="background: var(--task3);">4</div>
+          <div class="step-title" style="color: var(--task3);">Export & Upload</div>
           <div class="step-content">
-            <p>Export your progress report as JPEG from the documentation tool. Upload to Padlet with your name as the title.</p>
+            <p>Export your progress report as PDF or JPEG from the documentation tool. Upload to Padlet.</p>
           </div>
         </div>
       </div>
@@ -2070,61 +2197,143 @@ p {
       <h4 style="color: var(--task3);">💡 Reflection Tips</h4>
       <ul>
         <li><strong>Be honest about challenges</strong> — struggles are part of learning, not failures</li>
-        <li><strong>Be specific</strong> — "I found it hard" is less useful than "I struggled to blend the digital text with the hand-drawn elements because..."</li>
-        <li><strong>Connect to future work</strong> — how will what you learned today help you in upcoming lessons?</li>
+        <li><strong>Be specific</strong> — "I struggled to blend the digital text with the hand-drawn elements because..." is better than "I found it hard"</li>
+        <li><strong>Connect to future work</strong> — how will what you learned today help you?</li>
         <li><strong>Include before/after images</strong> — visual evidence of your progress is powerful</li>
       </ul>
     </div>
 
-    <!-- Upload Section -->
-    <div class="upload-section task3-upload">
-      <h3>📤 Upload Task 3: Progress Report</h3>
-      <p>Upload your completed progress report with screenshots and reflection.</p>
-      <div style="margin-top: 15px;">
-        <a href="https://hsstokes.github.io/Progress_Documentation/" target="_blank" class="btn-upload btn-progress">
-          Open Progress Tool →
-        </a>
-        <a href="https://padlet.com/artslondon/week-9-portfolio-checklist-game-and-document-your-practice-ejw4hqwg3sxmpsj" target="_blank" class="btn-upload btn-task3">
+    <!-- Tool Preview -->
+    <div class="tool-preview">
+      <h3>📝 Progress Documentation Tool</h3>
+      <p>Record your progress, add screenshots with captions, rate your confidence, and answer reflection questions.</p>
+      
+      <a href="https://hsstokes.github.io/Progress_Documentation/" target="_blank" class="tool-btn">
+        Open Progress Tool →
+      </a>
+      
+      <div class="tool-features">
+        <div class="tool-feature">
+          <span class="icon">📸</span>
+          <span>Upload screenshots</span>
+        </div>
+        <div class="tool-feature">
+          <span class="icon">✏️</span>
+          <span>Add captions</span>
+        </div>
+        <div class="tool-feature">
+          <span class="icon">⭐</span>
+          <span>Rate confidence</span>
+        </div>
+        <div class="tool-feature">
+          <span class="icon">💭</span>
+          <span>Answer reflections</span>
+        </div>
+        <div class="tool-feature">
+          <span class="icon">📄</span>
+          <span>Download PDF</span>
+        </div>
+        <div class="tool-feature">
+          <span class="icon">📤</span>
+          <span>Upload to Padlet</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="checklist">
+      <h3>✅ End of Lesson Checklist</h3>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Task 1: Secondary image with subtitle, quote, and Harvard reference</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Task 2: Completed integrated A3 page (scanned physical + digital)</div>
+        </div>
+      </div>
+      <div class="checklist-item">
+        <div class="checklist-checkbox" onclick="toggleChecked(this)"></div>
+        <div class="checklist-text">
+          <div class="checklist-label">Task 3: Progress report with screenshots and reflection</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final Upload -->
+    <div style="background: linear-gradient(135deg, var(--task3-light) 0%, #fff 100%); padding: 25px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); margin: 25px 0; border: 3px solid var(--task3);">
+      <h3 style="color: var(--task3); text-align: center; margin-top: 0; margin-bottom: 15px;">📤 Upload Your Progress Report</h3>
+      <p style="text-align: center; margin-bottom: 20px;">Once you've completed your Progress Report, upload it to Padlet.</p>
+      <div style="text-align: center;">
+        <a href="https://padlet.com/artslondon/week-9-portfolio-checklist-game-and-document-your-practice-ejw4hqwg3sxmpsj" target="_blank" style="display: inline-block; background: var(--task3); color: white; padding: 15px 35px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 5px 20px rgba(196, 92, 74, 0.4);">
           Upload to Padlet →
         </a>
       </div>
     </div>
 
-    <!-- End of Lesson Summary -->
-    <div class="checklist-reminder" style="border-color: #28a745; background: linear-gradient(135deg, #e8f5e9 0%, #fff 100%); margin-top: 30px;">
-      <h4 style="color: #28a745;">✅ End of Lesson Checklist</h4>
-      <p>Before you leave, confirm you have uploaded all three tasks to Padlet:</p>
-      <ul>
-        <li><strong>Task 1:</strong> Secondary image with subtitle, quote, and Harvard reference</li>
-        <li><strong>Task 2:</strong> Completed integrated A3 page (scanned physical + digital elements)</li>
-        <li><strong>Task 3:</strong> Progress report with screenshots, challenges faced, and learning reflection</li>
-      </ul>
-    </div>
-
-    <div class="tip-box" style="border-color: var(--purple); background: linear-gradient(135deg, var(--purple-light) 0%, #fff 100%); margin-top: 25px;">
-      <h4 style="color: var(--purple);">📅 Coming Up in Lesson 2</h4>
-      <p>Next lesson will focus on <strong>design development pages</strong> — applying digital skills to show the relationship between 2D and 3D ideas in your portfolio.</p>
-      <p style="margin-bottom: 0;"><strong>Before next lesson:</strong> Review your design development pages and identify which ones need strengthening.</p>
+    <div class="info-box" style="border-color: var(--purple); background: var(--purple-light);">
+      <strong style="color: var(--purple);">📅 Coming Up in Lesson 2:</strong> Next lesson will focus on <strong>design development pages</strong> — applying digital skills to show the relationship between 2D and 3D ideas in your portfolio.
     </div>
 
     <div class="nav-buttons">
-      <button class="nav-btn prev-btn" onclick="goToSection('task2')">Previous: Task 2</button>
-      <button class="nav-btn next-btn" onclick="goToSection('overview')">Back to Overview</button>
+      <button class="nav-btn prev-btn" onclick="goToSection('task2')">Previous</button>
+      <button class="nav-btn next-btn" onclick="goToSection('overview')">Back to Start</button>
     </div>
   </div>
 
-</div>
+  <!-- Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
 
-<!-- Image Modal -->
-<div id="imageModal" class="modal">
-  <span class="close" onclick="closeModal()">&times;</span>
-  <img class="modal-content" id="modalImage">
+  <footer>© 2025 Creative Digital Skills — Research Page Development</footer>
 </div>
 
 <button class="print-button" onclick="window.print()">🖨️</button>
 
 <script>
-// Quick Reference Toggle
+const sections = ['overview', 'task1', 'task2', 'task3'];
+let currentSection = 'overview';
+
+function goToSection(sectionId) {
+  if (!sectionId) return;
+  
+  document.querySelectorAll('.content-section').forEach(section => {
+    section.classList.remove('active');
+  });
+  
+  document.getElementById(sectionId).classList.add('active');
+  
+  document.querySelectorAll('.nav-block').forEach(block => {
+    block.classList.remove('active-block');
+    if (block.dataset.section === sectionId) {
+      block.classList.add('active-block');
+    }
+  });
+  
+  currentSection = sectionId;
+  updateProgressBar();
+  window.scrollTo(0, 0);
+}
+
+function updateProgressBar() {
+  const progressBar = document.getElementById('progressBar');
+  const index = sections.indexOf(currentSection);
+  const percentage = ((index + 1) / sections.length) * 100;
+  progressBar.style.width = `${percentage}%`;
+}
+
+function toggleChecked(element) {
+  element.classList.toggle('checked');
+  
+  const checkboxes = document.querySelectorAll('.checklist-checkbox');
+  const states = Array.from(checkboxes).map(cb => cb.classList.contains('checked'));
+  localStorage.setItem('research-page-dev-checklist', JSON.stringify(states));
+}
+
 function toggleQuickReference() {
   const content = document.getElementById('qrContent');
   const toggle = document.getElementById('qrToggle');
@@ -2138,77 +2347,44 @@ function toggleQuickReference() {
   }
 }
 
-// Image Modal
 function openModal(src) {
   const modal = document.getElementById('imageModal');
   const modalImg = document.getElementById('modalImage');
-  modal.style.display = 'block';
+  modal.style.display = "block";
   modalImg.src = src;
 }
 
 function closeModal() {
-  document.getElementById('imageModal').style.display = 'none';
+  document.getElementById('imageModal').style.display = "none";
 }
 
-// Close modal on click outside
 window.onclick = function(event) {
   const modal = document.getElementById('imageModal');
   if (event.target === modal) {
-    modal.style.display = 'none';
+    modal.style.display = "none";
   }
 }
 
-// Section Navigation
-const sections = ['overview', 'task1', 'task2', 'task3'];
-let currentSection = 'overview';
-
-function goToSection(sectionId) {
-  if (!sectionId) return;
-  
-  // Hide all sections
-  document.querySelectorAll('.content-section').forEach(section => {
-    section.classList.remove('active');
-  });
-  
-  // Show the selected section
-  document.getElementById(sectionId).classList.add('active');
-  
-  // Update active navigation block
-  document.querySelectorAll('.nav-block').forEach(block => {
-    block.classList.remove('active-block');
-    if (block.dataset.section === sectionId) {
-      block.classList.add('active-block');
-    }
-  });
-  
-  // Update current section
-  currentSection = sectionId;
-  
-  // Update progress bar
-  updateProgressBar();
-  
-  // Scroll to top
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-function updateProgressBar() {
-  const progressBar = document.getElementById('progressBar');
-  const index = sections.indexOf(currentSection);
-  const percentage = ((index + 1) / sections.length) * 100;
-  progressBar.style.width = `${percentage}%`;
-}
-
-// Initialize
 document.addEventListener('DOMContentLoaded', () => {
-  // Set up navigation blocks
   document.querySelectorAll('.nav-block').forEach(block => {
     block.addEventListener('click', () => {
       goToSection(block.dataset.section);
     });
   });
   
-  // Initialize progress bar
+  document.querySelector('.nav-block[data-section="overview"]').classList.add('active-block');
   updateProgressBar();
+  
+  const savedStates = localStorage.getItem('research-page-dev-checklist');
+  if (savedStates) {
+    const states = JSON.parse(savedStates);
+    const checkboxes = document.querySelectorAll('.checklist-checkbox');
+    checkboxes.forEach((cb, i) => {
+      if (i < states.length && states[i]) {
+        cb.classList.add('checked');
+      }
+    });
+  }
 });
 </script>
 
