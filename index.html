@@ -745,7 +745,7 @@ const SECTIONS = Array.from(document.querySelectorAll(".section")).map(s => s.id
 function goTo(id) {
   document.querySelectorAll(".section").forEach(s => s.classList.toggle("active", s.id == id));
   document.querySelectorAll(".nav-btn").forEach(b => b.classList.toggle("active", b.dataset.target == id));
-  document.querySelectorAll("#" + id + " video").forEach(v => { v.play().catch(() => {}); });
+  document.querySelectorAll("#" + id + " video[autoplay]").forEach(v => { v.play().catch(() => {}); });
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 document.querySelectorAll(".nav-btn").forEach(b => b.addEventListener("click", () => goTo(b.dataset.target)));
